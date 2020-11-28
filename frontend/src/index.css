@@ -120,5 +120,7 @@ img.medium{
   margin: 0.1 rem;
 }
 
-
+.rating span:last-child{
+  color: #404040;
+}
 

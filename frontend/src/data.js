@@ -6,7 +6,7 @@ const data = {
             category:'Art',
             image:'/images/product-1.jpg',
             price: 97.99,
-            rating: 4.5,
+            rating: 2,
             numReviews: 15,
             description:'Made with dye'
         },
@@ -16,8 +16,8 @@ const data = {
             category:'Art',
             image:'/images/product-2.png',
             price: 83.99,
-            rating: 4.5,
-            numReviews: 15,
+            rating: 3.5,
+            numReviews: 20,
             description:'Made with love'
         },
         {
