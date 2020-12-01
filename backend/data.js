@@ -34,7 +34,7 @@ const data = {
             description:'Made with dye'
         },
         {
-            _id:'3',
+            _id:'4',
             name:'Girl with stars',
             category:'Shirts',
             image:'/images/product-1.jpg',
@@ -45,7 +45,7 @@ const data = {
             description:'Made with dye'
         },
         {
-            _id:'3',
+            _id:'5',
             name:'Girl with stars',
             category:'Shirts',
             image:'/images/product-1.jpg',
@@ -55,7 +55,7 @@ const data = {
             description:'Made with dye'
         },
         {
-            _id:'3',
+            _id:'6',
             name:'Girl with stars',
             category:'Shirts',
             image:'/images/product-1.jpg',

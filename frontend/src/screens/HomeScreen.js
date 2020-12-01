@@ -1,36 +1,23 @@
 // Home Screen Page 
 
 // Basic Import for fetching data
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect} from 'react';
+
 
 // Import Product component 
 import Product from '../components/Product';
 import LoadingBox from '../components/LoadingBox';
 import MessageBox from '../components/MessageBox';
+import { useDispatch, useSelector } from 'react-redux';
+import { listProducts } from '../actions/productAction';
 
 export default function HomeScreen(){
-    // React Hook for products, default value of products is empty array
-    const [products, setProducts] = useState([]);
-    // React Hook for Loading
-    const [loading,setLoading] = useState(false);
-    // React Hook for Error
-    const [error,setError] = useState(false);
-    // React Hook to fetch data 
+    const dispatch = useDispatch();
+    const productList = useSelector((state) => state.productList);
+    const {loading, error, products} = productList;
     useEffect(()=>{
-        const fetchData = async () =>{
-            try{
-                setLoading(true);
-                const { data } = await axios.get('api/products');
-                setLoading(false);
-                setProducts(data);
-            }catch(err){
-                setError(err.message);
-                setLoading(false);
-            }
-        };
-        fetchData();
-    },[])
+        dispatch(listProducts());
+    },[dispatch])
 
 
     return (
